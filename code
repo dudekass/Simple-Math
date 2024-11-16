@@ -1,0 +1,183 @@
+## Simple Math Problem sets
+
+## Additioin of two numbers 
+def addition():
+    continue_addition = True  # Flag variable
+    while continue_addition:
+        while True:  # Inner loop for number input validation
+            number_1 = input("first number: ")
+            number_2 = input("second number: ")
+            try:
+                num1 = int(number_1)
+                num2 = int(number_2)
+                break  # Break inner loop if inputs are valid
+            except ValueError:
+                print("Invalid input. Please enter numbers only.")
+
+        def add(x, y):
+            return x + y
+
+        add_result = add(num1, num2)
+        print(f"The result is: {add_result}")
+
+        while True:  # Loop for continuation input validation
+            add_going = input("Do you want to try with more numbers? (yes/no): ").lower()
+            if add_going == "yes":
+                print("Ok, let's add two numbers!")
+                break  # Break inner loop to continue addition
+            elif add_going == "no":
+                print("No worries!")
+                continue_addition = False  # Set flag to False to stop the outer loop
+                break  # Exit inner loop
+            else:
+                print("Input invalid, please say 'yes' or 'no'") 
+
+## Subtraction of two numbers
+def subtraction():
+    continue_subtraction = True  # Flag variable
+    while continue_subtraction:
+        while True:  # Inner loop for number input validation
+            number_sub_1 = input("first number: ")
+            number_sub_2 = input("second number: ")
+            try:
+                num_sub_1 = int(number_sub_1)
+                num_sub_2 = int(number_sub_2)
+                break  # Break inner loop if inputs are valid
+            except ValueError:
+                print("Invalid input. Please enter numbers only.")
+
+        def sub(x, y):
+            return x - y
+
+        sub_result = sub(num_sub_1, num_sub_2)
+        print(f"The result is: {sub_result}")
+
+        while True:  # Loop for continuation input validation
+            sub_going = input("Do you want to try with more numbers? (yes/no): ").lower()
+            if sub_going == "yes":
+                print("Ok, let's do it again!")
+                break  # Break inner loop to continue addition
+            elif sub_going == "no":
+                print("No worries!")
+                continue_subtraction = False  # Set flag to False to stop the outer loop
+                break  # Exit inner loop
+            else:
+                print("Input invalid, please say 'yes' or 'no'") 
+                       
+## Multiplication of two numbers
+def multiplication():
+    continue_multiplication = True  # Flag variable
+    while continue_multiplication:
+        while True:  # Inner loop for number input validation
+            number_mul_1 = input("first number: ")
+            number_mul_2 = input("second number: ")
+            try:
+                num_mul_1 = int(number_mul_1)
+                num_mul_2 = int(number_mul_2)
+                break  # Break inner loop if inputs are valid
+            except ValueError:
+                print("Invalid input. Please enter numbers only.")
+
+        def mul(x, y):
+            return x * y
+
+        mul_result = mul(num_mul_1, num_mul_2)
+        print(f"The result is: {mul_result}")
+
+        while True:  # Loop for continuation input validation
+            mul_going = input("Do you want to try with more numbers? (yes/no): ").lower()
+            if mul_going == "yes":
+                print("Ok, let's do it again!")
+                break  # Break inner loop to continue addition
+            elif mul_going == "no":
+                print("No worries!")
+                continue_multiplication = False  # Set flag to False to stop the outer loop
+                break  # Exit inner loop
+            else:
+                print("Input invalid, please say 'yes' or 'no'")
+
+## Division of two numbers
+def division():
+    continue_division = True  # Flag variable
+    while continue_division:
+        while True:  # Inner loop for number input validation
+            number_div_1 = input("number you want to divide: ")
+            number_div_2 = input("number you want to divide it by: ")
+            try:
+                num_div_1 = int(number_div_1)
+                num_div_2 = int(number_div_2)
+                break  # Break inner loop if inputs are valid
+            except ValueError:
+                print("Invalid input. Please enter numbers only.")
+
+        def div(x, y):
+            return x / y
+        def floor(x, y):
+            return x // y
+        def rem(x, y):
+            return x % y
+
+        div_result = div(num_div_1, num_div_2)
+        print(f"The result is: {div_result}")
+
+        floor_result = floor(num_div_1, num_div_2)
+        remainder_result = rem(num_div_1, num_div_2)
+
+        while True:
+            floor_division = input("do you want to know the floor division number? (yes/no): ")
+            if floor_division == "yes":
+                print(f"The floor division is: {floor_result}")
+                break
+            elif floor_division == "no":
+                print("ok!") 
+                break
+            else: 
+                print("Input invalid, please say 'yes' or 'no'")
+
+        while True:
+            remainder_division = input("do you want to know what the remainder is? (yes/no): ")
+            if remainder_division == "yes":
+                print(f"The remainder is: {remainder_result}")
+                break
+            elif remainder_division == "no":
+                print("ok!")
+                break
+            else: 
+                print("Input invalid, please say 'yes' or 'no'")
+
+
+        while True:
+            div_going = input("Do you want to try with more numbers? (yes/no): ").lower()
+            if div_going == "yes":
+                print("Ok, let's do it again!")
+                break
+            elif div_going == "no":
+                print("No worries!")
+                continue_division = False
+                break  
+            else:
+                print("Input invalid, please say 'yes' or 'no'")
+
+
+## Setting up the bigger outer loop
+
+math_problem = input("what can I help you with today? (addition / subtraction / multiplication / division)").lower()
+
+while True:
+    if math_problem == "addition":
+        addition()
+        break
+    elif math_problem == "subtraction":
+        subtraction()
+        break
+    elif math_problem == "multiplicatioin":
+        multiplication()
+        break
+    elif math_problem == "division":
+        division()
+        break
+    else: 
+        print("Invalid input. Please choose from addition, subtraction, multiplication, or division.")
+        math_problem = input("what can I help you with today? (addition / subtraction / multiplication / division)").lower()  
+
+
